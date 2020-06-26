@@ -18,14 +18,14 @@ function verifyData(req,res,next) {
         return res.json ({
             error : 'conteúdo é obrigatório' ,
         });
-    }else if (!data){
+    }else if(!data){
         return res.json({
             error:'data é obrigatório' ,
         }) ;
-    } else if (!hora){
-        retutn res.json({
-            error:'hora é obrigatório' 
-        }) ;
+    } else if(!hora){
+        return res.json({
+            error:'hora é obrigatório' ,
+        });
     }
     next();
 }
